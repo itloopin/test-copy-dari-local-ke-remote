@@ -1,0 +1,43 @@
+untuk merubah config supaya username dan password nya sama
+git config --global user.name "okihartanto"
+git config --global user.email "oki.hartanto@gmail.com"
+
+git clone https://github.com/itloopin/test-remote-repo.git  = untuk copy dari remote ke local
+
+git remote = untuk tau uadh ada remote nya atau belum
+git remote -v = untuk tau remote nya secara komplit
+
+git status = untuk melihat status git
+git add . = untuk menambahkan perubahan ke stagging
+git commit -m "komentar nya"  = untuk meng commit add jadi ke repo
+
+apabila status nya sudah modified atau sudah pernah di commit sebelumnya pake perintah ini:
+git commit -am "komentar"
+
+git push = untuk copy perubahan ke remote repo
+
+kalo ada conflict antara repo local dan repo remote beda file nya lakukan ini:
+git fetch = untuk cek di remote sudah sampe mana commit nya beda ngk dengan yang di local
+
+setelah itu lakukan 
+git pull  = untuk mengambil file yang ada di remote, otomatis akan ada merge conflict
+
+setelah di update file di local jalanin git add . dan git commit -am "komentar" lagi
+setelah itu di push lagi
+
+untuk melihat log pake perintah ini:
+git log --all --decorate --oneline --graph
+
+kalo ingin pake alias jalanin di bawah ini, jadi nanti tinggal tulis graph saja:
+alias graph="git log --all --decorate --oneline --graph"
+
+
+copy dari local repo ke remote
+1. Di local bikin dulu git init
+2. di remote juga bikin repo baru tapi initial repository with a Readme nya jangan di centang supaya kosong isinya
+
+nanti di local jalanin ini:
+git remote add origin https://github.com/itloopin/test-remote-repo-2.git
+
+setelah itu jalanin 
+git push -U origin master
